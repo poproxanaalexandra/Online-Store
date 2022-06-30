@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cos de cumparaturi</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" type="text/css" href="D:\SIIT\Proiect final\resources\grid.css" />
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="D:\SIIT\Proiect final\resources\general.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+
+
+        function deleteItem(idProdus) {
+            if (confirm("Esti sigur ca vrei sa stergi acest produs?")) {
+
+                let cos = localStorage.getItem("cos");
+                if (cos === null) {
+                    cos = [];
+                } else {
+                    cos = JSON.parse(cos);
+                }
+                for (let j = 0; j < cos.length; j++) {
+                    let p = cos[j];
+                    if (idProdus === p.i) {
+                        console.log(p.i);
+                        cos.splice(j, 1);
+                        break;
+                    }
+                }
+
+                localStorage.setItem("cos", JSON.stringify(cos));
+                location.reload();
+
+
+            } else location.reload();
+        }
+
+        function showCart() {
+            document.querySelector("#inside").innerHTML = "";
+            draw();
+
+        }
+
+
+        function draw() {
+            var total = 0;
+            var totalProduse = 0;
+            var cos = localStorage.getItem("cos");
+            if (cos === null) {
+                cos = [];
+            } else {
+                cos = JSON.parse(cos);
+            }
+            let str = "";
+            for (let p of cos) {
+                if (cos.p === null) {
+                    continue;
+                }
+
+                total = (total + p.cantitate * p.pret);
+                totalProduse = totalProduse + p.cantitate;
+                str += ` 
+                <div class="card rounded-3 mb-4">
+                        <div class="card-body p-4">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="col-md-5 col-lg-2 col-xl-2">
+                                    <img src="${p.imagine}"
+                                        class="img-fluid rounded-3" alt="">
+                                </div>
+                                <div class="col-md-5 col-lg-4 col-xl-4">
+                                    <p class="lead fw-normal mb-2">${p.nume}</p>
+                                   
+                                </div>
+                                <div class="col-md-5 col-lg-2 col-xl-2 d-flex">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"> - </button>
+                              
+
+                                    <input id="form1"  min="0" max="${p.stoc + p.cantitate}" name="quantity" value="${p.cantitate}" type="number"
+                                        class="form-control form-control-sm" />
+
+                                        <button class="btn btn-outline-secondary" type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"> + </button>
+                                </div>
+                                <div class="col-md-5 col-lg-3 col-xl-1">
+                                    <button onclick="updateQty()" type="button" class="btn btn-outline-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+  <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+</svg> </button>
+                                   
+                                </div> 
+                                <div class="col-md-5 col-lg-2 col-xl-2">
+                                    <h5 id="total1" class="mb-0">${(p.pret * p.cantitate).toFixed(2)} lei </h5> 
+                                   
+                                </div> 
+
+                                <div class="col-md-5 col-lg-3 col-xl-1">
+                                    <button onclick="deleteItem(${p.i}, showCart())" type="button" class="btn btn-outline-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+  <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+  <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+</svg></i></button>
+                                   
+                                </div> 
+                                
+                               
+                            </div>
+                        </div>
+                    </div>
+`
+            }
+            document.querySelector("#inside").innerHTML += str;
+            document.querySelector("#total").innerHTML += total.toFixed(2);
+
+
+
+
+        }
+
+        /*function updateQty() {
+            let cos = localStorage.getItem("cos");
+            if (cos === null) {
+                cos = [];
+            } else {
+                cos = JSON.parse(cos);
+            }
+            for (let p of cos) {
+                if (cos.p === null) {
+                    continue;
+                } else {
+                    (p.cantitate = document.getElementById("form1").innerHTML.value);
+                    p.cantitate;
+                    document.querySelector("#total1").innerHTML = (p.pret * p.cantitate).toFixed(2);
+                    total = (total + p.cantitate * p.pret);
+                    document.querySelector("#total").innerHTML = total;
+                }
+                showCart();
+            }
+        } */
+
+
+
+
+    </script>
+
+</head>
+
+
+<body onload="showCart()">
+
+    <!-- Navbar Start -->
+    <nav class="navbar-custom sticky-top navbar-expand-lg" data-wow-delay="0.1s">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="D:\SIIT\Proiect final\Home\index.html">
+                <h4>GlutenFree</h4>
+                <h6> Store & more</h6>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"> Articole </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="D:\SIIT\Proiect final\Produse\produse.html"> Magazin </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Retete
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Dulciuri</a></li>
+                            <li><a class="dropdown-item" href="#">Aperitive sarate</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">#naturalfaragluten</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <button type="button" class="btn btn-default btn-lg" aria-label="Right Align">
+                    <a class="nav-link" href="D:\SIIT\Proiect final\Produse\cos.html">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/proiect-final-b6d3a.appspot.com/o/cart.png?alt=media&token=aa2e1d96-a361-4e01-af1d-74830dc3716b"
+                            class="cart"> Cos
+                    </a>
+                </button>
+                <button type="button" class="btn btn-default btn-lg" aria-label="Right Align">
+                    <a class="nav-link" href="D:\SIIT\Proiect final\admin.html">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/proiect-final-b6d3a.appspot.com/o/account.png?alt=media&token=b4321af8-d676-43ac-8a41-6d93f0058a1a"
+                            class="cart"> Admin
+                    </a>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar End -->
+
+    <!-- Cart Section Start -->
+    <section class="h-100" style="background-color: #eee;">
+        <div class="container h-100 py-5">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-10">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3 class="fw-normal mb-0 text-black">Cos de cumparaturi</h3>
+                    </div>
+                    <div id="inside">
+                        <!-- Aici afisez cosul -->
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body p-4 d-flex flex-row">
+                            <div class="form-outline flex-fill">
+                                <input type="text" id="form1" class="form-control form-control-lg" />
+                                <label class="form-label" for="form1">Voucher</label>
+                            </div>
+                            <button type="button" class="btn btn-outline-warning btn-lg ms-3">Aplica voucher</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body d-flex justify-content-between">
+                            <h3>Total: <span id="total"> </span> lei </h3>
+                            <button type="button" class="btn btn-warning btn-block btn-lg ms-3"> Plateste <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-credit-card" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z" />
+                                    <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Cart Section End -->
+
+</body>
+
+</html>
