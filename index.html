@@ -12,48 +12,23 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="https://poproxanaalexandra.github.io/empty/general.css"/>
+  <link rel="stylesheet" href="https://poproxanaalexandra.github.io/empty/general.css" />
+
+  <style>
+    .carouselProduse2 {
+      max-width: 400px;
+      max-height: 418px !important;
+      margin: 30px auto;
+      color: black;
+    }
+  </style>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
 
-  <script>
-
-    var listaArticole = {};
-    async function draw() {
-      let url = "https://proiect-final-b6d3a-default-rtdb.europe-west1.firebasedatabase.app/"
-      var response = await fetch(url + ".json");
-      listaArticole = await response.json();
-      console.log(listaArticole.articole);
-      let str = "";
-      for (let i in listaArticole.articole) {
-        str += `
-                  
-                          <div>
-                              <h1> ${listaArticole.articole[i].titlu} </h1>
-                              <hr>
-                          </div>
-                          <br>
-                          <div>
-                            <p> ${listaArticole.articole[i].continut} </p>
-                          
-                          </div>
-                          <br><br><br><br>
-                      
-                   
-              `;
-        document.querySelector("#articole").innerHTML = str;
-      }
-    }
-
-
-  </script>
-
-
-
-</head>
+ </head>
 
 <body>
 
@@ -72,7 +47,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" onclick="draw()"> Articole </a>
+            <a class="nav-link active" aria-current="page" href="https://poproxanaalexandra.github.io/Online-Store/articole.html"> Articole </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://poproxanaalexandra.github.io/Online-Store/Produse/produse.html">
@@ -125,11 +100,11 @@
       </div>
       <div class="row g-4">
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-          <img class="img-fluid py-5"
+          <img class="img-fluid py-5 my-4"
             src="https://firebasestorage.googleapis.com/v0/b/proiect-final-b6d3a.appspot.com/o/GF.png?alt=media&token=0b6ed5c2-959e-49ab-8a01-22a12a931aba"
             alt="">
           <div class="bg-light p-4">
-            <a class="d-block h5 lh-base mb-4 text-center" href="">Informații și articole de specialitate</a>
+            <a class="d-block h5 lh-base mb-1 text-center" href="">Informații și articole de specialitate</a>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -176,26 +151,23 @@
             </div>
 
           </div>
-
           <!-- Carousel End -->
           <div class="bg-light p-4">
-            <a class="d-block h5 lh-base mb-4 text-center" href="https://poproxanaalexandra.github.io/Online-Store/Produse/produse.html">
+            <a class="d-block h5 lh-base mb-4 py-1 text-center"
+              href="https://poproxanaalexandra.github.io/Online-Store/Produse/produse.html">
               Magazin de produse fără gluten</a>
-
           </div>
-        </div>
+          </div>
+        
         <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-          <img class="img-fluid" src="" alt="">
+          <img class="img-fluid carouselProduse2 p-1" src="https://firebasestorage.googleapis.com/v0/b/proiect-final-b6d3a.appspot.com/o/hummus.jpg?alt=media&token=cd5f60ff-92f6-4ffd-95cf-0f28fbfd4a8b" alt="Muffins">
           <div class="bg-light p-4">
-            <a class="d-block h5 lh-base mb-4" href="">How to cultivate organic fruits and vegetables in own firm</a>
-            <div class="text-muted border-top pt-4">
-              <small class="me-3"><i class="fa fa-user text-primary me-2"></i>Admin</small>
-              <small class="me-3"><i class="fa fa-calendar text-primary me-2"></i>01 Jan, 2045</small>
-            </div>
+            <a class="d-block h5 lh-base mb-4 text-center" href="">
+              Rețete</a>            
           </div>
         </div>
-        
-        
+
+
       </div>
     </div>
   </div>

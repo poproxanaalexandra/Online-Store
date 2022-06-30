@@ -10,7 +10,7 @@
          "alergeni":"Soia, Susan"
       },
       {
-         "nume":"Faina fara gluten pentru paine si blat de pizza-Bread Mix",
+         "nume":"Faina fara gluten pentru paine și blat de pizza-Bread Mix",
          "tag": "faina",
          "pret":27,
          "imagine":"https://firebasestorage.googleapis.com/v0/b/proiect-final-b6d3a.appspot.com/o/bezglutenmix.jpg?alt=media&token=7f193c82-784e-4968-9961-d77cc2412860",
@@ -33,7 +33,7 @@
          "pret":14.70,
          "imagine":"https://firebasestorage.googleapis.com/v0/b/proiect-final-b6d3a.appspot.com/o/gullonmaria.jpg?alt=media&token=6005a093-d660-4ec9-b54b-df35b4820708",
          "stoc":7,
-         "ingrediente":"Malai, ulei de floarea soarelui cu nivel ridicat de acizi grasi (18%), zahar,amidon de porumb, faina de orez, sirop de glucoza si fructoza, fibre de porumb, fibre de mazare, sare alimentara, agent de afanare: carbonati de sodiu si carbonati de amoniu, emulgator: lecitina de soia",
+         "ingrediente":"Malai, ulei de floarea soarelui cu nivel ridicat de acizi grasi (18%), zahar,amidon de porumb, faina de orez, sirop de glucoza și fructoza, fibre de porumb, fibre de mazare, sare alimentara, agent de afanare: carbonati de sodiu și carbonati de amoniu, emulgator: lecitina de soia",
          "alergeni":"Soia"
       },
       {
@@ -42,8 +42,8 @@
          "pret":12.80,
          "imagine":"https://firebasestorage.googleapis.com/v0/b/proiect-final-b6d3a.appspot.com/o/painealba.jpg?alt=media&token=4c9a7e89-7ea9-48b5-97e7-ef47c3a6e6d4",
          "stoc":15,
-         "ingrediente":"Amidon din porumb, apă, faina de orez, fibre vegetale (psyllium si citrice) agenti de îngroșare: hidroxipropil metilceluloză, ulei de floarea soarelui, proteine din soia, drojdie, sare, zahar, acidifiant: acid citric",
-         "alergeni":"Poate conține urme de lupin si mustar"
+         "ingrediente":"Amidon din porumb, apă, faina de orez, fibre vegetale (psyllium și citrice) agenti de îngroșare: hidroxipropil metilceluloză, ulei de floarea soarelui, proteine din soia, drojdie, sare, zahar, acidifiant: acid citric",
+         "alergeni":"Poate conține urme de lupin și mustar"
       },
       {
          "nume":"Mix faina fara gluten Mix Bread",
@@ -60,7 +60,7 @@
          "pret": 13.30,
          "imagine":"https://firebasestorage.googleapis.com/v0/b/proiect-final-b6d3a.appspot.com/o/biscuiti%20friends.webp?alt=media&token=96949ec5-b1aa-4119-800a-0200aa55144f",
          "stoc":14,
-         "ingrediente":"faina de porumb, faina de orez, margarina vegetala nehidrogenata, zahar, amidon din cartofi, amidon din porumb, sirop de sfecla de zahar, amidon din orez, agenti de afanare, amoniac, amidon modificat de porumb, sare si arome.",
+         "ingrediente":"faina de porumb, faina de orez, margarina vegetala nehidrogenata, zahar, amidon din cartofi, amidon din porumb, sirop de sfecla de zahar, amidon din orez, agenti de afanare, amoniac, amidon modificat de porumb, sare și arome.",
          "alergeni":"Fara alergeni"
       },
       {
@@ -69,11 +69,11 @@
          "pret": 16.20,
          "imagine":"https://firebasestorage.googleapis.com/v0/b/proiect-final-b6d3a.appspot.com/o/chocchips.webp?alt=media&token=c9528ce2-61a3-4650-8097-1843463a5034",
          "stoc":9,
-         "ingrediente":"amidon de porumb, bucati de ciocolata 17% (zahar, pasta de cacao, unt de cacao, emulgator: lecitina de soia), faina de orez, ulei de floarea soarelui cu continut oleic ridicat 14%, fulgi de ovaz 13%, zahar, oligofructoza, polidextroza, amidon de orez, sare, agent de crestere carbonat de amoniu si carbonat de potasiu, aroma, aroma naturala, emulgator: lecitina de soia.",
-         "alergeni":"Poate conține urme de lapte, alune si nuci!"
+         "ingrediente":"amidon de porumb, bucati de ciocolata 17% (zahar, pasta de cacao, unt de cacao, emulgator: lecitina de soia), faina de orez, ulei de floarea soarelui cu continut oleic ridicat 14%, fulgi de ovaz 13%, zahar, oligofructoza, polidextroza, amidon de orez, sare, agent de crestere carbonat de amoniu și carbonat de potasiu, aroma, aroma naturala, emulgator: lecitina de soia.",
+         "alergeni":"Poate conține urme de lapte, alune și nuci!"
       },
       {
-         "nume":"Fursecuri fara gluten cu alune turcesti si zahar cocos",
+         "nume":"Fursecuri fara gluten cu alune turcesti și zahar cocos",
          "tag": "biscuiti",
          "pret": 10.60,
          "imagine":"https://firebasestorage.googleapis.com/v0/b/proiect-final-b6d3a.appspot.com/o/biscuiti-fara-gluten-nuci-pecan-zahar-cocos-50gr-majomkenyer_1024x1024%402x.webp?alt=media&token=10d974a2-a30d-42ab-a48a-1d5ebf284fc9",
@@ -82,25 +82,25 @@
          "alergeni":"Fara alergeni"
       },
       {
-         "nume":"Fursecuri fara gluten cu ciocolata si zmeura",
+         "nume":"Fursecuri fara gluten cu ciocolata și zmeura",
          "tag": "biscuiti",
          "pret": 10.60,
          "imagine":"https://firebasestorage.googleapis.com/v0/b/proiect-final-b6d3a.appspot.com/o/biscuiti-fara-gluten-ciocolata-zmeura-50gr-majomkenyer_1024x1024%402x.webp?alt=media&token=3162e278-a227-4da1-9b54-1cec15ac6212",
          "stoc":2,
-         "ingrediente":"ou, sirop de orez, faina de cocos, amidon de tapioca, indulcitor (eritrtiol), miez de nuca macinat, ciocolata cu eritritol si indulcitori (6,3%) [masa de cacap, indulcitor (eritritol), unt de cacao, emulgator (lecitina de floarea soarelui), arome, indulcitor (glicoizi de stevie)],concentrat de zmeura (3%), concentrat de merisor, afine confiate cu concentrat de mere [afine (55-70%), concentrat de mere (35%-45%), ulei de floarea soarelui (0,1-1%)], grasime vegetala (ulei de cocos),fulgi de ovaz fara gluten, pudra de cacao (1,5%), faina de fibra de bambus, tarate de psyllium, antioxidanti (acid ascorbic), agenti de crestere (bicarbonati de sodiu)",
+         "ingrediente":"ou, sirop de orez, faina de cocos, amidon de tapioca, indulcitor (eritrtiol), miez de nuca macinat, ciocolata cu eritritol și indulcitori (6,3%) [masa de cacap, indulcitor (eritritol), unt de cacao, emulgator (lecitina de floarea soarelui), arome, indulcitor (glicoizi de stevie)],concentrat de zmeura (3%), concentrat de merisor, afine confiate cu concentrat de mere [afine (55-70%), concentrat de mere (35%-45%), ulei de floarea soarelui (0,1-1%)], grasime vegetala (ulei de cocos),fulgi de ovaz fara gluten, pudra de cacao (1,5%), faina de fibra de bambus, tarate de psyllium, antioxidanti (acid ascorbic), agenti de crestere (bicarbonati de sodiu)",
          "alergeni":"Ou",
          "detalii": ""
 
       },
       {
-         "nume":"Paste penne cu 20% morcovi proaspeti si in auriu",
+         "nume":"Paste penne cu 20% morcovi proaspeti și în auriu",
          "tag": "paste",
          "pret": 18.60,
          "imagine":"https://firebasestorage.googleapis.com/v0/b/proiect-final-b6d3a.appspot.com/o/Penne%20morcov-600x600.jpg?alt=media&token=b934fc76-4569-46f2-ba45-a3d18f3fa7ad",
          "stoc":2,
-         "ingrediente":"faina de linte rosie 72%, morcovi proaspeti 20%, faina de in auriu 8%",
+         "ingrediente":"faina de linte rosie 72%, morcovi proaspeti 20%, faina de în auriu 8%",
          "alergeni":"in",
-         "detalii": "Pastele noastre fainoase sunt artizanale, laminate si uscate la maximum 43 de grade. In procesul de laminare aluatul se preseaza mult mai putin decat la procedeul de extrudare al pastelor comune, prin aceasta o mare parte din albumina din aluat ajungand la suprafata pastelor. La fierbere porii se vor inchide si pastele vor ramane mai stabile si mai consistente, avand un gust mai bun si fiind 'al dente'. In productia industriala pastele se usuca in 3 pana la 4 ore la temperaturi de pana la 130 de grade. In manufactura noastra uscarea dureaza pana la 2 zile, astfel incat substantele nutritive raman nemodificate, fapt care imbunatateste gustul. Timp de fierbere: 6 minute"
+         "detalii": "Pastele noastre fainoase sunt artizanale, laminate și uscate la maximum 43 de grade. în procesul de laminare aluatul se preseaza mult mai putin decat la procedeul de extrudare al pastelor comune, prin aceasta o mare parte din albumina din aluat ajungand la suprafata pastelor. La fierbere porii se vor inchide și pastele vor ramane mai stabile și mai consistente, avand un gust mai bun și fiind 'al dente'. în productia industriala pastele se usuca în 3 pana la 4 ore la temperaturi de pana la 130 de grade. în manufactura noastra uscarea dureaza pana la 2 zile, astfel incat substantele nutritive raman nemodificate, fapt care imbunatateste gustul. Timp de fierbere: 6 minute"
       },
       {
          "nume":"Penne Sam Mills - 500g",
@@ -110,7 +110,7 @@
          "stoc":16,
          "ingrediente":"Faina de porumb 100 %, apa",
          "alergeni":"Fără alergeni",
-         "detalii": "Pasta D'Oro fara gluten este un segment special de paste delicioase, fara gluten. Realizate integral prin procedee speciale, pastele Pasta D'Oro nu contin gluten, ou sau soia, aditivi, coloranti sau conservanti si au continut scazut de grasimi. Datorita indicelui glicemic scazut, furnizeaza energie constant si prelungit putand fi consumate fara probleme si de catre diabetici. Timp de fierbere: 10-12 minute"
+         "detalii": "Pasta D'Oro fara gluten este un segment special de paste delicioase, fara gluten. Realizate integral prin procedee speciale, pastele Pasta D'Oro nu contin gluten, ou sau soia, aditivi, coloranti sau conservanti și au continut scazut de grasimi. Datorita indicelui glicemic scazut, furnizeaza energie constant și prelungit putand fi consumate fara probleme și de catre diabetici. Timp de fierbere: 10-12 minute"
          
       }
    ],
@@ -124,15 +124,18 @@
    "articole":[
       {
          "titlu":"Ce este boala Celiacă?",
+         "prop": "Celiachia sau intoleranța la gluten este provocată de apariția unei reacții adverse la gluten",
          "continut":"Celiachia sau intoleranța la gluten este provocată de apariția unei reacții adverse la gluten. Boala Celiacă reprezintă o formă severă a intoleranței la gluten, fiind o afecțiune autoimună, cauzată de o reacție anormală a sistemului imunitar la gluten. Astfel, atunci când este consumat gluten, se declanșează un răspuns imun al organismului, care duce la inflamarea și deteriorarea intestinului subțire. Mai exact, răspunsul sistemului imunitar la gluten duce la crearea unei toxine care distruge vilii intestinali. Aceștia sunt responsabili cu absorbția vitaminelor, mineralelor și a altor nutrienți din mâncare. Astfel, atunci când organismul nu mai poate absorbi nutrienții din mâncare, pot să apară diferite probleme de sănătate, precum deficiențe nutriționale, probleme digestive, malnutriție sau deteriorare permanentă a intestinelor"
       },
       {
          "titlu":"Ce este glutenul?",
-         "continut":"Glutenul este o proteina care se gaseste in grau, secara si orz. Majoritatea oamenilor nu au nici o problema atunci cand mananca alimente care contin gluten. Totusi, in cazul persoanelor cu predispozitie genetica, glutenul stimuleaza sistemul lor imun intr-un mod anormal ceea ce conduce la distrugerea mucoasei intestinale. Aceasta duce la malabsorbtia substantelor nutritive din alimente si in special a fierului, calciului si acidului folic."
+         "prop": "Glutenul este o proteina care se găseste în grâu, secara și orz",
+         "continut":"Glutenul este o proteina care se găsește în grâu, secara și orz. Majoritatea oamenilor nu au nici o problema atunci cand mananca alimente care contin gluten. Totusi, în cazul persoanelor cu predispozitie genetica, glutenul stimuleaza sistemul lor imun intr-un mod anormal ceea ce conduce la distrugerea mucoasei intestinale. Aceasta duce la malabsorbtia substantelor nutritive din alimente și în special a fierului, calciului și acidului folic."
       },
       {
         "titlu":"Cauzele bolii celiace",
-        "continut":"Nu se cunoaste cauza exacta care determina boala celiaca, dar studiile recente au identificat anumite gene (gena HLA DQA1/DQB1) care definesc o predispozitie crescuta pentru boala. 30% din populatie are aceste gene, insa doar 3% dezvolta celiachie. Nu se stie de ce boala apare doar la anumite persoane, si nu apare la altele. Se pare ca alti contribuitori, cum ar fi factori din mediu sau alte gene, influenteaza dezvoltarea acestei boli complexe. Predispozitia de a face boala se mosteneste, ceea ce inseamna ca celiachia poate sa apara la mai multi membri ai aceleiasi familii. Persoanele care au o ruda de gradul 1 (parinte, copil, frate) cu celiachie prezinta un risc de 4-15% de a dezvolta boala celiaca, de aceea este important sa se testeze, chiar daca nu au simptome. La persoanele predispuse genetic, ingerarea alimentelor care contin gluten (care se gaseste in anumite cereale - grau, secara si orz) declanseaza apoi o reactie imuna anormala cu formarea de autoanticorpi care ataca propria mucoasa a intestinului subtire, ceea ce cauzeaza inflamatie si leziunile intestinale caracteristice bolii – atrofia vililor intestinali. Aceste leziuni ale intestinului subtire determina tulburarile de digestie si absorbtie (maldigestie si malabsorbtie) caracteristice bolii celiace."
+        "prop":"Se considera ca celiachia este o boala genetică",
+        "continut":"Nu se cunoaste cauza exacta care determina boala celiaca, dar studiile recente au identificat anumite gene (gena HLA DQA1/DQB1) care definesc o predispozitie crescuta pentru boala. 30% din populatie are aceste gene, insa doar 3% dezvolta celiachie. Nu se stie de ce boala apare doar la anumite persoane, și nu apare la altele. Se pare ca alti contribuitori, cum ar fi factori din mediu sau alte gene, influenteaza dezvoltarea acestei boli complexe. Predispozitia de a face boala se mosteneste, ceea ce inseamna ca celiachia poate sa apara la mai multi membri ai aceleiasi familii. Persoanele care au o ruda de gradul 1 (parinte, copil, frate) cu celiachie prezinta un risc de 4-15% de a dezvolta boala celiaca, de aceea este important sa se testeze, chiar daca nu au simptome. La persoanele predispuse genetic, ingerarea alimentelor care contin gluten (care se găsește în anumite cereale - grâu, secara și orz) declanseaza apoi o reactie imuna anormala cu formarea de autoanticorpi care ataca propria mucoasa a intestinului subtire, ceea ce cauzeaza inflamatie și leziunile intestinale caracteristice bolii – atrofia vililor intestinali. Aceste leziuni ale intestinului subtire determina tulburarile de digestie și absorbtie (maldigestie și malabsorbtie) caracteristice bolii celiace."
      }
    ]
 }
