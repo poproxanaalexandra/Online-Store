@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,82 +10,83 @@
     <title>Magazin</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet"
-        href="https://firebasestorage.googleapis.com/v0/b/proiect-final-b6d3a.appspot.com/o/general.css?alt=media&token=73607ba2-945d-4568-8867-181f494248da" />
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://poproxanaalexandra.github.io/Online-Store/general.css" />
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"></script>
 
 
-  <script>
+    <script>
 
 
-function addCos(i) {
-            var depasit = false;
-            var found = false;
-            let cantitate = 1;
-            let stoc = list.produse[i].stoc*1;
+      function addCos(i) {
+        var depasit = false;
+        var found = false;
+        let cantitate = 1;
+        let stoc = list.produse[i].stoc * 1;
 
-            if (stoc >= cantitate) {
-                var produs = {
-                    stoc: stoc-1,
-                    imagine: list.produse[i].imagine,
-                    nume: list.produse[i].nume,
-                    pret: list.produse[i].pret,
-                    cantitate: cantitate,
-                    i: i
-                    
-                }
-                
-                let cos = localStorage.getItem("cos");
-                if (cos === null) {
-                  alert('Produsul a fost adaugat in cos')
-                    cos = [];
-                } else {
-                    cos = JSON.parse(cos);
-                }
+        if (stoc >= cantitate) {
+          var produs = {
+            stoc: stoc - 1,
+            imagine: list.produse[i].imagine,
+            nume: list.produse[i].nume,
+            pret: list.produse[i].pret,
+            cantitate: cantitate,
+            i: i
 
-                for (let p of cos) {
-                    if ((p.i === (i.toString())) || (p.i === i)) {
-                        if (p.stoc - cantitate >= 0) {
-                            p.stoc = p.stoc - cantitate;
-                            p.cantitate += cantitate;
-                            found = true;
-                            stoc = p.stoc*1;
-                            alert('Produsul a fost adaugat in cos')
-                        } else {
-                            depasit = true;
-                            alert(`Cantitatea selectata depaseste stocul. Stoc maxim ${(stoc-cantitate)}`)
-                        }
+          }
 
-                    }
-                }
+          let cos = localStorage.getItem("cos");
+          if (cos === null) {
+            alert('Produsul a fost adaugat in cos')
+            cos = [];
+          } else {
+            cos = JSON.parse(cos);
+          }
 
-                if ((!found) & (!depasit)) {
-                    cos.push({...produs, stoc: stoc-1});
-                }
+          for (let p of cos) {
+            if ((p.i === (i.toString())) || (p.i === i)) {
+              if (p.stoc - cantitate >= 0) {
+                p.stoc = p.stoc - cantitate;
+                p.cantitate += cantitate;
+                found = true;
+                stoc = p.stoc * 1;
+                alert('Produsul a fost adaugat in cos')
+              } else {
+                depasit = true;
+                alert(`Cantitatea selectata depaseste stocul. Stoc maxim ${(stoc - cantitate)}`)
+              }
 
-                localStorage.setItem("cos", JSON.stringify(cos));
-            } else { alert(`Cantitatea selectata depaseste stocul. Stoc maxim ${(stoc-cantitate)}`) }
-        }
+            }
+          }
 
-    
+          if ((!found) & (!depasit)) {
+            cos.push({ ...produs, stoc: stoc - 1 });
+          }
 
-    let list = [];
-    async function draw() {
-      let url = "https://proiect-final-b6d3a-default-rtdb.europe-west1.firebasedatabase.app/"
-      var response = await fetch(url + ".json");
-      list = await response.json();
-     
-      let bisc, faina, snack, paste = {};
-      for (let i in list.produse){
+          localStorage.setItem("cos", JSON.stringify(cos));
+        } else { alert(`Cantitatea selectata depaseste stocul. Stoc maxim ${(stoc - cantitate)}`) }
+      }
+
+
+
+      let list = [];
+      async function draw() {
+        let url = "https://proiect-final-b6d3a-default-rtdb.europe-west1.firebasedatabase.app/"
+        var response = await fetch(url + ".json");
+        list = await response.json();
+
+        let bisc, faina, snack, paste = {};
+        for (let i in list.produse) {
           if (list.produse[i] === null) {
             continue;
           }
           if (list.produse[i].tag === "faina") {
-              faina = `
+            faina = `
 
               <div id="prod_${i}" class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="product-item">
@@ -110,11 +112,11 @@ function addCos(i) {
               
               
               `
-              document.querySelector("#tab1").innerHTML += faina;
-            }
+            document.querySelector("#tab1").innerHTML += faina;
+          }
 
-            if (list.produse[i].tag === "biscuiti") {
-              bisc = `
+          if (list.produse[i].tag === "biscuiti") {
+            bisc = `
 
               <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="product-item">
@@ -140,11 +142,11 @@ function addCos(i) {
               
               
               `
-              document.querySelector("#tab2").innerHTML += bisc;
-            }
+            document.querySelector("#tab2").innerHTML += bisc;
+          }
 
-            if (list.produse[i].tag === "paste") {
-              paste = `
+          if (list.produse[i].tag === "paste") {
+            paste = `
 
               <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="product-item">
@@ -170,17 +172,17 @@ function addCos(i) {
               
               
               `
-              document.querySelector("#tab3").innerHTML += paste;
-            }
+            document.querySelector("#tab3").innerHTML += paste;
           }
+        }
       }
 
-  
-  </script>  
+
+    </script>
 
 
 
-</head>
+  </head>
 
 
 <body onload="draw()">
@@ -258,7 +260,7 @@ function addCos(i) {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/proiect-final-b6d3a.appspot.com/o/biscuiti%20friends.webp?alt=media&token=96949ec5-b1aa-4119-800a-0200aa55144f"
             class="d-block w-100" alt="...">
-            <a href="D:/SIIT/Proiect%20final/detalii.html?id=6"></a>
+          <a href="D:/SIIT/Proiect%20final/detalii.html?id=6"></a>
         </div>
         <div class="carousel-item">
           <img
@@ -288,50 +290,51 @@ function addCos(i) {
 
   <div class="container-xxl py-5 bg-transparent">
     <div class="container">
-        <div class="row g-0 gx-5 align-items-end">
-            <div class="col-lg-6">
-                <div class="section-header text-start mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                    <h1 class="display-5 mb-3">Produse fara gluten</h1>
-                    
-                </div>
-            </div>
-            <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
-                <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary border-2 active" data-bs-toggle="pill" href="#tab-1">Făină fără gluten</a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-2">Biscuiți </a>
-                    </li>
-                    <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-3">Paste</a>
-                    </li>
-                    <li class="nav-item me-0">
-                      <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-4">Alte produse</a>
-                  </li>
-                </ul>
-            </div>
+      <div class="row g-0 gx-5 align-items-end">
+        <div class="col-lg-6">
+          <div class="section-header text-start mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h1 class="display-5 mb-3">Produse fara gluten</h1>
+
+          </div>
         </div>
-        <div class="tab-content">
-            <div id="tab-1" class="tab-pane fade show p-0 active">
-                <div id="tab1" class="row g-4">
-                    
-                </div>
-            </div>
-            <div id="tab-2" class="tab-pane fade show p-0">
-                <div id="tab2" class="row g-4">
-                
-                </div>
-            </div>
-            <div id="tab-3" class="tab-pane fade show p-0">
-                <div id="tab3" class="row g-4">
-                 
-                </div>
-            </div>
+        <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
+          <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
+            <li class="nav-item me-2">
+              <a class="btn btn-outline-primary border-2 active" data-bs-toggle="pill" href="#tab-1">Făină fără
+                gluten</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-2">Biscuiți </a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-3">Paste</a>
+            </li>
+            <li class="nav-item me-0">
+              <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-4">Alte produse</a>
+            </li>
+          </ul>
         </div>
+      </div>
+      <div class="tab-content">
+        <div id="tab-1" class="tab-pane fade show p-0 active">
+          <div id="tab1" class="row g-4">
+
+          </div>
+        </div>
+        <div id="tab-2" class="tab-pane fade show p-0">
+          <div id="tab2" class="row g-4">
+
+          </div>
+        </div>
+        <div id="tab-3" class="tab-pane fade show p-0">
+          <div id="tab3" class="row g-4">
+
+          </div>
+        </div>
+      </div>
     </div>
-</div>
- 
+  </div>
+
 
 </body>
 
