@@ -132,13 +132,14 @@ justify-content: space-between;
     color: black;
    
 }
-.carouselProduse2{
+.carouselProduse2 {
     max-width: 200px !important;
     max-height: 400px !important;
     margin: 20px auto;
     color: black;
    
 }
+
 #articole{
     width: 50%;
     height: 40%;
@@ -150,10 +151,7 @@ justify-content: space-between;
 .productStore{
     max-width: 100% !important;
     max-height: 300px;
-    margin: 20px;
-    
-
-    
+    margin: 20px; 
     
 }
 
