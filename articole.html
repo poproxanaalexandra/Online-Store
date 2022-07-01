@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gluten Free</title>
+  <title>Articole</title>
+  <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/proiect-final-b6d3a.appspot.com/o/favicon.png?alt=media&token=4368cb2b-8f97-4391-93ff-9b6a77621db6">
 
 
 
@@ -52,10 +53,11 @@
 
 
     async function draw() {
+      document.querySelector(".backgroundLoader").classList.remove("hidden");
       let url = "https://proiect-final-b6d3a-default-rtdb.europe-west1.firebasedatabase.app/"
       var response = await fetch(url + ".json");
+      document.querySelector(".backgroundLoader").classList.add("hidden");
       listaArticole = await response.json();
-      console.log(listaArticole.articole);
       let str = "";
       for (let i in listaArticole.articole) {
         str += `
@@ -86,6 +88,10 @@
 </head>
 
 <body onload="draw()">
+
+ <div class="backgroundLoader hidden">
+ <span class="loader"></span>
+</div>
 
   <!-- Navbar Start -->
 
